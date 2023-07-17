@@ -1,0 +1,71 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+.page-header {
+  position: relative;
+  min-height: 100vh;
+  background-image: url(../images/vine_bottle.png);
+  background-color: #2b2c2d;
+  background-position: center;
+  background-size: cover;
+
+  &__grid {
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 31px;
+    gap: $gap 0;
+    display: grid;
+    grid-template-areas: "actions" "menu";
+    grid-template-columns: 1fr;
+    @extend %container;
+  }
+
+  &__menu {
+    grid-area: menu;
+  }
+
+  &__actions {
+    grid-area: actions;
+  }
+
+  &__buttons {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 150px;
+    display: flex;
+    gap: 30px;
+
+    @include xs {
+      gap: 20px;
+      bottom: 75px;
+    }
+  }
+}
+
+.btn {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $color-white;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba($color-accent, 0.5);
+  background-color: $color-accent;
+  min-width: 203px;
+  min-height: 50px;
+  cursor: pointer;
+
+  @include xs {
+    font-size: 0.875rem;
+    min-width: 150px;
+    min-height: 40px;
+  }
+
+  &--second {
+    min-width: 182px;
+  }
+}

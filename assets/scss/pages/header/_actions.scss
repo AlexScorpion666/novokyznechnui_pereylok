@@ -1,0 +1,30 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include xs {
+    flex-direction: column;
+  }
+
+  a {
+    color: $color-white;
+  }
+
+  &__locations {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  &__phones {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+}

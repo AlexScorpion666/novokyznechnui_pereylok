@@ -1,0 +1,41 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+.collection {
+  padding: 80px 0;
+  background: $bgc-second;
+
+  &-content {
+    @extend %container;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-top: 1px solid $color-accent;
+    border-bottom: 1px solid $color-accent;
+    padding: 60px 0;
+
+    @include md {
+      flex-direction: column;
+      // align-items: center;
+    }
+
+    &-left {
+      @include xl {
+        width: 60%;
+      }
+      @include md {
+        width: auto;
+      }
+    }
+
+    &-right {
+      @include xl {
+        width: 40%;
+      }
+      @include md {
+        width: auto;
+      }
+    }
+  }
+}

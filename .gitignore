@@ -1,0 +1,11 @@
+# ignored folders
+.idea/
+.vscode/
+node_modules/
+
+# ignored files
+DS_Store
+.csscomb.json
+gulpfile.js
+package.json
+package-lock.json
